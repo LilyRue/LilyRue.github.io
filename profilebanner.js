@@ -870,16 +870,19 @@ if (reversed == null) { reversed = false; }
 		this.posebtn.addEventListener("click", posenext)
 		function posenext () {
 			root.gotoAndPlay('pose');
+			root.stop();
 		}
 		
 		this.smirkbtn.addEventListener("click", smirknext)
 		function smirknext () {
 			root.gotoAndPlay('smirk');
+			root.stop();
 		}
 		
 		this.explorebtn.addEventListener("click", explorenext)
 		function explorenext () {
 			root.gotoAndPlay('explore');
+			root.stop();
 		}
 	}
 	this.frame_1 = function() {
