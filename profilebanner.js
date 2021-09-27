@@ -33,6 +33,24 @@ lib.ssMetadata = [
 p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 
 
+(lib.explore2 = function() {
+	this.initialize(img.explore2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.explore3 = function() {
+	this.initialize(img.explore3);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.explore6 = function() {
+	this.initialize(img.explore6);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
 (lib.explorebtn = function() {
 	this.initialize(ss["profilebanner_atlas_1"]);
 	this.gotoAndStop(0);
@@ -46,6 +64,36 @@ p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 
 
+(lib.pose2 = function() {
+	this.initialize(img.pose2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.pose3 = function() {
+	this.initialize(img.pose3);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.pose4 = function() {
+	this.initialize(img.pose4);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.pose5 = function() {
+	this.initialize(img.pose5);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1439);
+
+
+(lib.pose8 = function() {
+	this.initialize(img.pose8);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
 (lib.posebtn = function() {
 	this.initialize(ss["profilebanner_atlas_1"]);
 	this.gotoAndStop(1);
@@ -55,6 +103,48 @@ p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 
 (lib.smirk1 = function() {
 	this.initialize(img.smirk1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk2 = function() {
+	this.initialize(img.smirk2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk3 = function() {
+	this.initialize(img.smirk3);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk4 = function() {
+	this.initialize(img.smirk4);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk5 = function() {
+	this.initialize(img.smirk5);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk6 = function() {
+	this.initialize(img.smirk6);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk7 = function() {
+	this.initialize(img.smirk7);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
+
+
+(lib.smirk8 = function() {
+	this.initialize(img.smirk8);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,2560,1440);
 
@@ -183,37 +273,82 @@ if (reversed == null) { reversed = false; }
 	// buttons
 	this.explorebtn = new lib.expb();
 	this.explorebtn.name = "explorebtn";
-	this.explorebtn.setTransform(951,544.4);
+	this.explorebtn.setTransform(955,550);
 	new cjs.ButtonHelper(this.explorebtn, 0, 1, 1);
 
 	this.smirkbtn = new lib.smirkb();
 	this.smirkbtn.name = "smirkbtn";
-	this.smirkbtn.setTransform(809,544.4);
+	this.smirkbtn.setTransform(815,550);
 	new cjs.ButtonHelper(this.smirkbtn, 0, 1, 1);
 
 	this.posebtn = new lib.posb();
 	this.posebtn.name = "posebtn";
-	this.posebtn.setTransform(667,544.5);
+	this.posebtn.setTransform(675,550);
 	new cjs.ButtonHelper(this.posebtn, 0, 1, 1);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.posebtn},{t:this.smirkbtn},{t:this.explorebtn}]}).wait(72));
 
 	// background
 	this.instance = new lib.pose1();
-	this.instance.setTransform(1,1,0.4,0.4);
+	this.instance.setTransform(0,0,0.4,0.4);
 
-	this.instance_1 = new lib.smirk1();
-	this.instance_1.setTransform(1,1,0.4,0.4);
+	this.instance_1 = new lib.pose2();
+	this.instance_1.setTransform(0,0,0.4,0.4);
 
-	this.instance_2 = new lib.explore1();
-	this.instance_2.setTransform(1,1,0.4,0.4);
+	this.instance_2 = new lib.pose3();
+	this.instance_2.setTransform(0,0,0.4,0.4);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},24).to({state:[{t:this.instance_2}]},24).wait(24));
+	this.instance_3 = new lib.pose4();
+	this.instance_3.setTransform(0,0,0.4,0.4);
+
+	this.instance_4 = new lib.pose5();
+	this.instance_4.setTransform(0,0,0.4,0.4);
+
+	this.instance_5 = new lib.pose8();
+	this.instance_5.setTransform(0,0,0.4,0.4);
+
+	this.instance_6 = new lib.smirk1();
+	this.instance_6.setTransform(0,0,0.4,0.4);
+
+	this.instance_7 = new lib.smirk2();
+	this.instance_7.setTransform(0,0,0.4,0.4);
+
+	this.instance_8 = new lib.smirk3();
+	this.instance_8.setTransform(0,0,0.4,0.4);
+
+	this.instance_9 = new lib.smirk4();
+	this.instance_9.setTransform(0,0,0.4,0.4);
+
+	this.instance_10 = new lib.smirk5();
+	this.instance_10.setTransform(0,0,0.4,0.4);
+
+	this.instance_11 = new lib.smirk6();
+	this.instance_11.setTransform(0,0,0.4,0.4);
+
+	this.instance_12 = new lib.smirk7();
+	this.instance_12.setTransform(0,0,0.4,0.4);
+
+	this.instance_13 = new lib.smirk8();
+	this.instance_13.setTransform(0,0,0.4,0.4);
+
+	this.instance_14 = new lib.explore1();
+	this.instance_14.setTransform(0,0,0.4,0.4);
+
+	this.instance_15 = new lib.explore2();
+	this.instance_15.setTransform(0,0,0.4,0.4);
+
+	this.instance_16 = new lib.explore3();
+	this.instance_16.setTransform(0,0,0.4,0.4);
+
+	this.instance_17 = new lib.explore6();
+	this.instance_17.setTransform(0,0,0.4,0.4);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},4).to({state:[{t:this.instance_2}]},4).to({state:[{t:this.instance_3}]},4).to({state:[{t:this.instance_4}]},4).to({state:[{t:this.instance_5}]},4).to({state:[{t:this.instance_6}]},4).to({state:[{t:this.instance_7}]},3).to({state:[{t:this.instance_8}]},3).to({state:[{t:this.instance_9}]},3).to({state:[{t:this.instance_10}]},3).to({state:[{t:this.instance_11}]},3).to({state:[{t:this.instance_12}]},3).to({state:[{t:this.instance_13}]},3).to({state:[{t:this.instance_14}]},3).to({state:[{t:this.instance_15}]},6).to({state:[{t:this.instance_16}]},6).to({state:[{t:this.instance_17}]},6).wait(6));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(513,289,512,288);
+p.nominalBounds = new cjs.Rectangle(512,288,513,288.5);
 // library properties:
 lib.properties = {
 	id: '3E2064ACA069094C895E846AABC32936',
@@ -224,8 +359,23 @@ lib.properties = {
 	opacity: 1.00,
 	manifest: [
 		{src:"images/explore1.png", id:"explore1"},
+		{src:"images/explore2.png", id:"explore2"},
+		{src:"images/explore3.png", id:"explore3"},
+		{src:"images/explore6.png", id:"explore6"},
 		{src:"images/pose1.png", id:"pose1"},
+		{src:"images/pose2.png", id:"pose2"},
+		{src:"images/pose3.png", id:"pose3"},
+		{src:"images/pose4.png", id:"pose4"},
+		{src:"images/pose5.png", id:"pose5"},
+		{src:"images/pose8.png", id:"pose8"},
 		{src:"images/smirk1.png", id:"smirk1"},
+		{src:"images/smirk2.png", id:"smirk2"},
+		{src:"images/smirk3.png", id:"smirk3"},
+		{src:"images/smirk4.png", id:"smirk4"},
+		{src:"images/smirk5.png", id:"smirk5"},
+		{src:"images/smirk6.png", id:"smirk6"},
+		{src:"images/smirk7.png", id:"smirk7"},
+		{src:"images/smirk8.png", id:"smirk8"},
 		{src:"images/profilebanner_atlas_1.png", id:"profilebanner_atlas_1"}
 	],
 	preloads: []
