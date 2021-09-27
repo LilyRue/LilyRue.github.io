@@ -575,29 +575,6 @@ lib.ssMetadata = [
 
 
 
-(lib.smirkb = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.smirkbtn();
-	this.instance.setTransform(-70,-26.4,0.4844,0.4844);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-70,-26.4,140,52.8);
-
-
 (lib.smirk_gif = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -664,6 +641,52 @@ if (reversed == null) { reversed = false; }
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,1024,576);
+
+
+(lib.smirb = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.smirkbtn();
+	this.instance.setTransform(-144.5,-54.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-144.5,-54.5,289,109);
+
+
+(lib.poseb = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.posebtn();
+	this.instance.setTransform(-144,-54.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-144,-54.5,288,109);
 
 
 (lib.pose_gif = function(mode,startPosition,loop,reversed) {
@@ -734,29 +757,6 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(0,0,1024,576);
 
 
-(lib.posb = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.posebtn();
-	this.instance.setTransform(-70,-26.5,0.4861,0.4862);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-70,-26.5,140,53);
-
-
 (lib.explore_gif = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
@@ -825,7 +825,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(0,0,1024,576);
 
 
-(lib.expb = function(mode,startPosition,loop,reversed) {
+(lib.exb = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -838,14 +838,14 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.explorebtn();
-	this.instance.setTransform(-70,-26.4,0.4844,0.4844);
+	this.instance.setTransform(-144.5,-54.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-70,-26.4,140,52.8);
+p.nominalBounds = new cjs.Rectangle(-144.5,-54.5,289,109);
 
 
 // stage content:
@@ -855,14 +855,16 @@ if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
 	props.startPosition = startPosition;
-	props.labels = {pose:0,smirk:24,explore:48};
+	props.labels = {pose:0,smirk:1,explore:2};
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,23,47,71];
+	this.actionFrames = [0,1,2];
 	// timeline functions:
 	this.frame_0 = function() {
+		this.stop();
+		
 		root = this;
 		
 		this.posebtn.addEventListener("click", posenext)
@@ -880,36 +882,33 @@ if (reversed == null) { reversed = false; }
 			root.gotoAndPlay('explore');
 		}
 	}
-	this.frame_23 = function() {
-		this.gotoAndPlay('pose');
+	this.frame_1 = function() {
+		this.stop();
 	}
-	this.frame_47 = function() {
-		this.gotoAndPlay('smirk');
-	}
-	this.frame_71 = function() {
-		this.gotoAndPlay('explore');
+	this.frame_2 = function() {
+		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(23).call(this.frame_23).wait(24).call(this.frame_47).wait(24).call(this.frame_71).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
-	// buttons
-	this.explorebtn = new lib.expb();
-	this.explorebtn.name = "explorebtn";
-	this.explorebtn.setTransform(955,550);
-	new cjs.ButtonHelper(this.explorebtn, 0, 1, 1);
-
-	this.smirkbtn = new lib.smirkb();
-	this.smirkbtn.name = "smirkbtn";
-	this.smirkbtn.setTransform(815,550);
-	new cjs.ButtonHelper(this.smirkbtn, 0, 1, 1);
-
-	this.posebtn = new lib.posb();
+	// button
+	this.posebtn = new lib.poseb();
 	this.posebtn.name = "posebtn";
-	this.posebtn.setTransform(675,550);
+	this.posebtn.setTransform(675.3,550.05,0.4861,0.4862,0,0,0,0.6,0.1);
 	new cjs.ButtonHelper(this.posebtn, 0, 1, 1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.posebtn},{t:this.smirkbtn},{t:this.explorebtn}]}).wait(72));
+	this.smirkbtn = new lib.smirb();
+	this.smirkbtn.name = "smirkbtn";
+	this.smirkbtn.setTransform(815.15,550.1,0.4844,0.4863,0,0,0,0.3,0.2);
+	new cjs.ButtonHelper(this.smirkbtn, 0, 1, 1);
+
+	this.explorebtn = new lib.exb();
+	this.explorebtn.name = "explorebtn";
+	this.explorebtn.setTransform(955.05,550.05,0.4844,0.4862,0,0,0,0.1,0.1);
+	new cjs.ButtonHelper(this.explorebtn, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.explorebtn},{t:this.smirkbtn},{t:this.posebtn}]}).wait(3));
 
 	// background
 	this.instance = new lib.pose_gif();
@@ -921,7 +920,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_2 = new lib.explore_gif();
 	this.instance_2.setTransform(512,288,1,1,0,0,0,512,288);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},24).to({state:[{t:this.instance_2}]},24).wait(24));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
 
 	this._renderFirstFrame();
 
@@ -929,7 +928,7 @@ if (reversed == null) { reversed = false; }
 p.nominalBounds = new cjs.Rectangle(512,288,513,288.5);
 // library properties:
 lib.properties = {
-	id: '3E2064ACA069094C895E846AABC32936',
+	id: '1A5812032AA22D4A87C6A5A8485C7A34',
 	width: 1024,
 	height: 576,
 	fps: 24,
@@ -997,7 +996,7 @@ an.bootstrapCallback=function(fnCallback) {
 };
 
 an.compositions = an.compositions || {};
-an.compositions['3E2064ACA069094C895E846AABC32936'] = {
+an.compositions['1A5812032AA22D4A87C6A5A8485C7A34'] = {
 	getStage: function() { return exportRoot.stage; },
 	getLibrary: function() { return lib; },
 	getSpriteSheet: function() { return ss; },
