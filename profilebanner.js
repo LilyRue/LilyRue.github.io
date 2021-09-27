@@ -855,16 +855,14 @@ if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
 	props.startPosition = startPosition;
-	props.labels = {pose:0,smirk:1,explore:2};
+	props.labels = {pose:0,smirk:2,explore:4};
 	props.loop = loop;
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	this.actionFrames = [0,1,2];
+	this.actionFrames = [0,1,3,5];
 	// timeline functions:
 	this.frame_0 = function() {
-		this.stop();
-		
 		root = this;
 		
 		this.posebtn.addEventListener("click", posenext)
@@ -888,12 +886,15 @@ if (reversed == null) { reversed = false; }
 	this.frame_1 = function() {
 		this.stop();
 	}
-	this.frame_2 = function() {
+	this.frame_3 = function() {
+		this.stop();
+	}
+	this.frame_5 = function() {
 		this.stop();
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(2).call(this.frame_3).wait(2).call(this.frame_5).wait(1));
 
 	// button
 	this.posebtn = new lib.poseb();
@@ -911,7 +912,7 @@ if (reversed == null) { reversed = false; }
 	this.explorebtn.setTransform(955.05,550.05,0.4844,0.4862,0,0,0,0.1,0.1);
 	new cjs.ButtonHelper(this.explorebtn, 0, 1, 1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.explorebtn},{t:this.smirkbtn},{t:this.posebtn}]}).wait(3));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.explorebtn},{t:this.smirkbtn},{t:this.posebtn}]}).wait(6));
 
 	// background
 	this.instance = new lib.pose_gif();
@@ -923,7 +924,7 @@ if (reversed == null) { reversed = false; }
 	this.instance_2 = new lib.explore_gif();
 	this.instance_2.setTransform(512,288,1,1,0,0,0,512,288);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},2).to({state:[{t:this.instance_2}]},2).wait(2));
 
 	this._renderFirstFrame();
 
