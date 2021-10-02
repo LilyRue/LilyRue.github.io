@@ -3,11 +3,11 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"CasCardProfile_atlas_1", frames: [[0,0,1920,1080]]},
-		{name:"CasCardProfile_atlas_2", frames: [[0,0,1920,1080]]},
+		{name:"CasCardProfile_atlas_1", frames: [[1082,205,200,75],[1082,282,200,75],[1082,359,200,75],[1082,436,200,75],[1082,513,200,75],[1082,590,200,75],[1082,0,360,203],[0,0,1080,1920]]},
+		{name:"CasCardProfile_atlas_2", frames: [[0,0,1080,1920]]},
 		{name:"CasCardProfile_atlas_3", frames: [[0,0,1920,1080]]},
-		{name:"CasCardProfile_atlas_4", frames: [[0,0,1080,1920]]},
-		{name:"CasCardProfile_atlas_5", frames: [[1082,205,200,75],[1082,282,200,75],[1082,359,200,75],[1082,436,200,75],[1082,513,200,75],[1082,590,200,75],[1082,0,360,203],[0,0,1080,1920]]}
+		{name:"CasCardProfile_atlas_4", frames: [[0,0,1920,1080]]},
+		{name:"CasCardProfile_atlas_5", frames: [[0,0,1920,1080]]}
 ];
 
 
@@ -32,63 +32,63 @@ lib.ssMetadata = [
 
 
 (lib.casedgebtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.casflowerbtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(1);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.caskuganebtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.caslaughbtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.casmadbtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(4);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.casreadbtn = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
-	this.gotoAndStop(5);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.FApPo9qWEAQop0X2 = function() {
-	this.initialize(ss["CasCardProfile_atlas_4"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.FApPpotWUA0fCvK2 = function() {
 	this.initialize(ss["CasCardProfile_atlas_1"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.FApPqwCWQAADTnG3 = function() {
+(lib.casflowerbtn = function() {
+	this.initialize(ss["CasCardProfile_atlas_1"]);
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.caskuganebtn = function() {
+	this.initialize(ss["CasCardProfile_atlas_1"]);
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.caslaughbtn = function() {
+	this.initialize(ss["CasCardProfile_atlas_1"]);
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.casmadbtn = function() {
+	this.initialize(ss["CasCardProfile_atlas_1"]);
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.casreadbtn = function() {
+	this.initialize(ss["CasCardProfile_atlas_1"]);
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.FApPo9qWEAQop0X2 = function() {
 	this.initialize(ss["CasCardProfile_atlas_2"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.FApPpotWUA0fCvK2 = function() {
+	this.initialize(ss["CasCardProfile_atlas_5"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.FApPqwCWQAADTnG3 = function() {
+	this.initialize(ss["CasCardProfile_atlas_4"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
@@ -102,135 +102,20 @@ lib.ssMetadata = [
 
 
 (lib.FApQSOjXsAIrDVd2 = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
+	this.initialize(ss["CasCardProfile_atlas_1"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.FApQTgRXEAAHfa62 = function() {
-	this.initialize(ss["CasCardProfile_atlas_5"]);
+	this.initialize(ss["CasCardProfile_atlas_1"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.read = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.casreadbtn();
-	this.instance.setTransform(-100,-37.5,0.4,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
-
-
-(lib.mad = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.casmadbtn();
-	this.instance.setTransform(-100,-37.5,0.4,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
-
-
-(lib.laugh = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.caslaughbtn();
-	this.instance.setTransform(-100,-37.5,0.4,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
-
-
-(lib.kugane = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.caskuganebtn();
-	this.instance.setTransform(-100,-37.5,0.4,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
-
-
-(lib.flower = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
-if (reversed == null) { reversed = false; }
-	var props = new Object();
-	props.mode = mode;
-	props.startPosition = startPosition;
-	props.labels = {};
-	props.loop = loop;
-	props.reversed = reversed;
-	cjs.MovieClip.apply(this,[props]);
-
-	// Layer_1
-	this.instance = new lib.casflowerbtn();
-	this.instance.setTransform(-100,-37.5,0.4,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-	this._renderFirstFrame();
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
-
-
-(lib.edge = function(mode,startPosition,loop,reversed) {
+(lib.Symbol8 = function(mode,startPosition,loop,reversed) {
 if (loop == null) { loop = true; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
@@ -243,14 +128,244 @@ if (reversed == null) { reversed = false; }
 
 	// Layer_1
 	this.instance = new lib.casedgebtn();
-	this.instance.setTransform(-100,-37.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-100,-37.5,200,75);
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.Symbol6 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.caslaughbtn();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.Symbol5 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.casmadbtn();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.Symbol3 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.casreadbtn();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.Symbol2 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.caskuganebtn();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.flowerbtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.casflowerbtn();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.readbtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Symbol3();
+	this.instance.setTransform(100,37.5,1,1,0,0,0,100,37.5);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.madbtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Symbol5();
+	this.instance.setTransform(100,37.5,1,1,0,0,0,100,37.5);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.laughbtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Symbol6();
+	this.instance.setTransform(100,37.5,1,1,0,0,0,100,37.5);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.kuganebtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Symbol2();
+	this.instance.setTransform(100,37.5,1,1,0,0,0,100,37.5);
+	new cjs.ButtonHelper(this.instance, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
+
+
+(lib.edgebtn = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.edgebtn = new lib.Symbol8();
+	this.edgebtn.name = "edgebtn";
+	this.edgebtn.setTransform(100,37.5,1,1,0,0,0,100,37.5);
+	new cjs.ButtonHelper(this.edgebtn, 0, 1, 1);
+
+	this.timeline.addTween(cjs.Tween.get(this.edgebtn).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,200,75);
 
 
 // stage content:
@@ -329,34 +444,34 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(2).call(this.frame_3).wait(2).call(this.frame_5).wait(2).call(this.frame_7).wait(2).call(this.frame_9).wait(2).call(this.frame_11).wait(1));
 
 	// button
-	this.laughbtn = new lib.laugh();
+	this.laughbtn = new lib.laughbtn();
 	this.laughbtn.name = "laughbtn";
-	this.laughbtn.setTransform(924,730.5);
+	this.laughbtn.setTransform(924,730.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.laughbtn, 0, 1, 1);
 
-	this.madbtn = new lib.mad();
+	this.madbtn = new lib.madbtn();
 	this.madbtn.name = "madbtn";
-	this.madbtn.setTransform(924,655.5);
+	this.madbtn.setTransform(924,655.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.madbtn, 0, 1, 1);
 
-	this.readbtn = new lib.read();
+	this.readbtn = new lib.readbtn();
 	this.readbtn.name = "readbtn";
-	this.readbtn.setTransform(924,580.5);
+	this.readbtn.setTransform(924,580.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.readbtn, 0, 1, 1);
 
-	this.kuganebtn = new lib.kugane();
+	this.kuganebtn = new lib.kuganebtn();
 	this.kuganebtn.name = "kuganebtn";
-	this.kuganebtn.setTransform(924,187.5);
+	this.kuganebtn.setTransform(924,187.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.kuganebtn, 0, 1, 1);
 
-	this.flowerbtn = new lib.flower();
+	this.flowerbtn = new lib.flowerbtn();
 	this.flowerbtn.name = "flowerbtn";
-	this.flowerbtn.setTransform(924,112.5);
+	this.flowerbtn.setTransform(924,112.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.flowerbtn, 0, 1, 1);
 
-	this.edgebtn = new lib.edge();
+	this.edgebtn = new lib.edgebtn();
 	this.edgebtn.name = "edgebtn";
-	this.edgebtn.setTransform(924,37.5);
+	this.edgebtn.setTransform(924,37.5,1,1,0,0,0,100,37.5);
 	new cjs.ButtonHelper(this.edgebtn, 0, 1, 1);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.edgebtn},{t:this.flowerbtn},{t:this.kuganebtn},{t:this.readbtn},{t:this.madbtn},{t:this.laughbtn}]}).wait(12));
