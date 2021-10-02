@@ -521,11 +521,11 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CasCardProfile_atlas_1.png", id:"CasCardProfile_atlas_1"},
-		{src:"images/CasCardProfile_atlas_2.png", id:"CasCardProfile_atlas_2"},
-		{src:"images/CasCardProfile_atlas_3.png", id:"CasCardProfile_atlas_3"},
-		{src:"images/CasCardProfile_atlas_4.png", id:"CasCardProfile_atlas_4"},
-		{src:"images/CasCardProfile_atlas_5.png", id:"CasCardProfile_atlas_5"}
+		{src:"images/CasCardProfile_atlas_1.png?1633145913779", id:"CasCardProfile_atlas_1"},
+		{src:"images/CasCardProfile_atlas_2.png?1633145913779", id:"CasCardProfile_atlas_2"},
+		{src:"images/CasCardProfile_atlas_3.png?1633145913779", id:"CasCardProfile_atlas_3"},
+		{src:"images/CasCardProfile_atlas_4.png?1633145913779", id:"CasCardProfile_atlas_4"},
+		{src:"images/CasCardProfile_atlas_5.png?1633145913779", id:"CasCardProfile_atlas_5"}
 	],
 	preloads: []
 };
