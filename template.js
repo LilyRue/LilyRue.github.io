@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"template_atlas_1", frames: [[741,194,234,67],[741,263,234,67],[0,390,234,67],[236,390,234,67],[472,390,234,67],[708,390,234,67],[0,459,234,67],[236,459,234,67],[472,459,234,67],[708,459,234,67],[0,528,234,67],[236,528,234,67],[0,0,1024,192],[0,597,1024,8],[0,194,280,167],[977,194,38,23],[282,194,280,167],[564,194,175,150],[0,363,1024,25]]}
+		{name:"template_atlas_1", frames: [[459,194,234,67],[695,194,234,67],[459,263,234,67],[695,263,234,67],[0,390,234,67],[236,390,234,67],[472,390,234,67],[708,390,234,67],[0,459,234,67],[236,459,234,67],[472,459,234,67],[708,459,234,67],[0,0,1024,192],[0,528,1024,8],[944,390,38,23],[0,194,280,167],[282,194,175,150],[0,363,1024,25]]}
 ];
 
 
@@ -125,16 +125,9 @@ lib.ssMetadata = [
 
 
 
-(lib.charbox2 = function() {
-	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(14);
-}).prototype = p = new cjs.Sprite();
-
-
-
 (lib.Hand = function() {
 	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(15);
+	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -147,21 +140,21 @@ p.nominalBounds = new cjs.Rectangle(0,0,2540,1425);
 
 (lib.Lily_Tired = function() {
 	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(16);
+	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.MenuBox = function() {
 	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(17);
+	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.Topbar = function() {
 	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(18);
+	this.gotoAndStop(17);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -456,13 +449,10 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
 
 	// Bottom
-	this.instance_7 = new lib.charbox2();
-	this.instance_7.setTransform(0,601);
+	this.instance_7 = new lib.Background();
+	this.instance_7.setTransform(0,576);
 
-	this.instance_8 = new lib.Background();
-	this.instance_8.setTransform(0,576);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_8},{t:this.instance_7}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(1));
 
 	this._renderFirstFrame();
 
