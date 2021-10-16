@@ -138,7 +138,7 @@ lib.ssMetadata = [
 p.nominalBounds = new cjs.Rectangle(0,0,2540,1425);
 
 
-(lib.Lily_Tired = function() {
+(lib.Lily_Standard = function() {
 	this.initialize(ss["template_atlas_1"]);
 	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
@@ -443,7 +443,7 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3}]}).wait(1));
 
 	// Portrait
-	this.instance_6 = new lib.Lily_Tired();
+	this.instance_6 = new lib.Lily_Standard();
 	this.instance_6.setTransform(0,601);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
