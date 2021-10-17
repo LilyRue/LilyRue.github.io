@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>template</title>
+<!-- write your code here -->
+<script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+<script src="template.js"></script>
+<script>
+// Global Scripts
+	gbl_txt=`
+]]Scene 
+Imp_Patrol
+]]Image
+S_WoD1
+]]Portrait
+Narrator
+]]Text
+Falling footsteps in the distance could be heard as someone was running, searching for a place to hide. Tap tap tap tap tap, a not rhythmic sound as someone clearly not physically fit was trying to run away and hide. >>>
+]]Text
+Not far away, a patrol of imps, a minor type of voidsent was desperately searching for this fleeing woman.
+]]Portrait
+Arkeisios
+]]Text
+“Where did she go!?”
+]]Portrait
+Fames
+]]Text
+“You were the one that had her restrained, ~~YOU~~ tell me where she went!”
+]]Portrait
+Arkeisios
+]]Text
+“She just disappeared right in front of my eyes, she just ‘Vanish’ed!”
+]]Portrait
+Minos
+]]Text
+Frustrated, the squad leader silenced the troops. “SILENCE! If we don’t re-capture her after dragging her into the void, the Emperor will have us ‘disintegrated’. As Minos spoke his voice trembled slightly in fear.
+]]Portrait
+Narrator
+]]Text
+The two Imps looked to each other, a pin drop could be heard in the sudden silence as the squabble ended just then. A scout Imp came rushing towards the group.
+]]Portrait
+Sithon
+]]Text
+“There you are, I have been searching all over for you. Ophellia says she is ready for soul extraction so you had better hurry and take the captured woman to the castle… wait, where is she?” >>>
+]]Text
+Sithon was seemingly exhausted from rushing so quickly that it just then noticed the situation.
+]]Portrait
+Minos
+]]Text
+“It seems she was more resourceful than we were told, she used some trick to escape.” Minos then sent up a flare to put all nearby patrols on alert. “We will find her, the Emperor will still have her soul.”
+]]Portrait
+Sithon
+]]Text
+Snorting in disgust “Useless soldiers, you had better hope you find her, if you don’t you will be lucky if the Emperor only has you killed, it is more likely he will allow Ophellia to experiment on you, >>> 
+]]Text
+she has gotten very good at creating Chimera out of damned voidsent from what I saw, although it is clear they suffer."
+]]Portrait
+Minos
+]]Text
+“Lets split up to search, send up a flare when you find her, you two go that way and Sithon you come with me.”
+]]Scene 
+Lily_Rest
+]]Image
+S_Lily_Rest
+]]Portrait
+Narrator
+]]Text
+Meanwhile, not far away, the woman they were searching for found a moment of respite hiding in an area behind some purplish-black crystal growth. She was quite winded and was struggling to catch her breath.
+]]Portrait
+Eva_Standard
+]]Text
+Whirling around to scan the immediate surroundings. "Current Location unknown… Warning! Seven thousand low tier voidsent detected in immediate vicinity, three voidsent not able to be quantified also in vicinity…"  >>>
+]]Text
+"Immediate evacuation recommended… request instructions.” The machine blurted, glowing red as it continued to perform its scan of the new surroundings.
+]]Portrait
+Lily_Tired
+]]Text
+Still gasping for air, the woman put her back to the crystal and then slid down to sit for a moment. “Haaaa….. So you don't….. Know where.....we are?” 
+]]Text
+She almost cried from the silliness of that statement. She took a moment to catch her breath. 
+]]Portrait
+Lily_Standard
+]]Text
+“Silly Eva, we are in the void, the thirteenth shard of our world, we got sucked into the aetherial tear” 
+]]Portrait
+Lily_Ponder
+]]Text
+She considered for a moment. “Eva, report on your aether reserves, do you have enough to help me open a new tear?” 
+]]Portrait
+Lily_Explain
+]]Text
+I should need perhaps eighty percent of your maximum, and if you help me we can open a way home for us.”
+]]Portrait
+Eva_Standard
+]]Text
+Eva was the designation of the node that was assisting the mage. “Aether reserves at seventy one percent, full usage will result in extended shutdown of this unit pending recharge.”
+]]Portrait
+Lily_Ponder
+]]Text
+Lily pondered, tapping her knuckle to her chin as she considered. “See if you can charge from these crystals here Eva, disable your protection circuits if you have to we need you to get that aether quickly” 
+]]Portrait
+Lily_Standard
+]]Text
+Lily was nervous when she suggested that, it was actually quite a risk to Eva, but she saw no other options to charge the Node.
+`</script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+	canvas = document.getElementById("canvas");
+	anim_container = document.getElementById("animation_container");
+	dom_overlay_container = document.getElementById("dom_overlay_container");
+	var comp=AdobeAn.getComposition("B7641CECC225324F88C755EBB8BBCD6C");
+	var lib=comp.getLibrary();
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+	var lib=comp.getLibrary();
+	loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+	var images=comp.getImages();	
+	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }	
+}
+function handleComplete(evt,comp) {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	var lib=comp.getLibrary();
+	var ss=comp.getSpriteSheet();
+	var queue = evt.target;
+	var ssMetadata = lib.ssMetadata;
+	for(i=0; i<ssMetadata.length; i++) {
+		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+	}
+	exportRoot = new lib.template();
+	stage = new lib.Stage(canvas);
+	stage.enableMouseOver();	
+	//Registers the "tick" event listener.
+	fnStartAnimation = function() {
+		stage.addChild(exportRoot);
+		createjs.Ticker.framerate = lib.properties.fps;
+		createjs.Ticker.addEventListener("tick", stage);
+	}	    
+	//Code to support hidpi screens and responsive scaling.
+	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);	
+	AdobeAn.compositionLoaded(lib.properties.id);
+	fnStartAnimation();
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:1024px; height:768px">
+		<canvas id="canvas" width="1024" height="768" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1024px; height:768px; position: absolute; left: 0px; top: 0px; display: block;">
+		</div>
+	</div>
+</body>
+</html>
