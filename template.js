@@ -3,7 +3,7 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"template_atlas_1", frames: [[459,194,234,67],[695,194,234,67],[459,263,234,67],[695,263,234,67],[0,390,234,67],[236,390,234,67],[472,390,234,67],[708,390,234,67],[0,459,234,67],[236,459,234,67],[472,459,234,67],[708,459,234,67],[0,0,1024,192],[0,528,1024,8],[944,390,38,23],[0,194,280,167],[282,194,175,150],[0,363,1024,25]]}
+		{name:"template_atlas_1", frames: [[741,363,234,67],[741,432,234,67],[0,559,234,67],[236,559,234,67],[472,559,234,67],[708,559,234,67],[0,628,234,67],[236,628,234,67],[472,628,234,67],[708,628,234,67],[0,697,234,67],[236,697,234,67],[0,0,1024,192],[0,766,1024,8],[0,194,280,167],[846,194,38,23],[282,194,280,167],[564,194,280,167],[0,363,280,167],[282,363,280,167],[564,363,175,150],[0,532,1024,25]]}
 ];
 
 
@@ -125,9 +125,16 @@ lib.ssMetadata = [
 
 
 
-(lib.Hand = function() {
+(lib.Eva_Standard = function() {
 	this.initialize(ss["template_atlas_1"]);
 	this.gotoAndStop(14);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Hand = function() {
+	this.initialize(ss["template_atlas_1"]);
+	this.gotoAndStop(15);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -138,23 +145,44 @@ lib.ssMetadata = [
 p.nominalBounds = new cjs.Rectangle(0,0,2540,1425);
 
 
-(lib.Lily_Standard = function() {
-	this.initialize(ss["template_atlas_1"]);
-	this.gotoAndStop(15);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.MenuBox = function() {
+(lib.Lily_Explain = function() {
 	this.initialize(ss["template_atlas_1"]);
 	this.gotoAndStop(16);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Topbar = function() {
+(lib.Lily_Ponder = function() {
 	this.initialize(ss["template_atlas_1"]);
 	this.gotoAndStop(17);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Lily_Standard = function() {
+	this.initialize(ss["template_atlas_1"]);
+	this.gotoAndStop(18);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Lily_Tired = function() {
+	this.initialize(ss["template_atlas_1"]);
+	this.gotoAndStop(19);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.MenuBox = function() {
+	this.initialize(ss["template_atlas_1"]);
+	this.gotoAndStop(20);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Topbar = function() {
+	this.initialize(ss["template_atlas_1"]);
+	this.gotoAndStop(21);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -215,6 +243,160 @@ if (reversed == null) { reversed = false; }
 	this._renderFirstFrame();
 
 }).prototype = getMCSymbolPrototype(lib.Symbol1, new cjs.Rectangle(0,0,38,23), null);
+
+
+(lib.Scene_2 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Lily1();
+	this.instance.setTransform(0,0,0.4032,0.4042);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Scene_2, new cjs.Rectangle(0,0,1024,576), null);
+
+
+(lib.narrator = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(1,1,1).p("AsVnzIYrAAIAAPnI4rAAg");
+	this.shape.setTransform(79,50);
+
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#000000").s().p("AsVH0IAAvnIYrAAIAAPng");
+	this.shape_1.setTransform(79,50);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.narrator, new cjs.Rectangle(-1,-1,160,102), null);
+
+
+(lib.Lily_Tired_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Lily_Tired();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Lily_Tired_1, new cjs.Rectangle(0,0,280,167), null);
+
+
+(lib.Lily_Standard_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Lily_Standard();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Lily_Standard_1, new cjs.Rectangle(0,0,280,167), null);
+
+
+(lib.Lily_Ponder_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Lily_Ponder();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Lily_Ponder_1, new cjs.Rectangle(0,0,280,167), null);
+
+
+(lib.Lily_Explain_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Lily_Explain();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Lily_Explain_1, new cjs.Rectangle(0,0,280,167), null);
+
+
+(lib.Eva_Standard_1 = function(mode,startPosition,loop,reversed) {
+if (loop == null) { loop = true; }
+if (reversed == null) { reversed = false; }
+	var props = new Object();
+	props.mode = mode;
+	props.startPosition = startPosition;
+	props.labels = {};
+	props.loop = loop;
+	props.reversed = reversed;
+	cjs.MovieClip.apply(this,[props]);
+
+	// Layer_1
+	this.instance = new lib.Eva_Standard();
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.Eva_Standard_1, new cjs.Rectangle(0,0,280,167), null);
 
 
 (lib.handhover = function(mode,startPosition,loop,reversed) {
@@ -398,30 +580,210 @@ if (reversed == null) { reversed = false; }
 	props.reversed = reversed;
 	cjs.MovieClip.apply(this,[props]);
 
-	// Buttons
-	this.instance = new lib.MenuBtn();
-	this.instance.setTransform(891.5,612.3);
-	new cjs.ButtonHelper(this.instance, 0, 1, 2, false, new lib.MenuBtn(), 3);
+	this.actionFrames = [0];
+	this.isSingleFrame = false;
+	// timeline functions:
+	this.frame_0 = function() {
+		if(this.isSingleFrame) {
+			return;
+		}
+		if(this.totalFrames == 1) {
+			this.isSingleFrame = true;
+		}
+		//Global Variables
+		let root = this;
+		let i = 0;	//index for chat
+		let k = 0;	//index for previous
+		var istat = [0,0,0,0];	//index for status, Scene, Image, Portrait, Text
+		
+		let actionlist = [];
+		let statuslist = [];
+		let scenelist = [];
+		let textlist = [];
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//
+		//                     USER INPUT
+		//				input all portrait and images here, ensure names match symbol names in animate and in the RP
+		//
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		//List of Symbol Instances
+		const ports = [this.Lily_Standard, this.Lily_Tired, this.Lily_Ponder, this.Lily_Explain, this.Eva_Standard, this.Narrator];
+		const imgs = [this.S_Lily_Rest];
+		
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//
+		//                     END USER INPUT
+		//
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//Class that is used to store each block of information from the global RP
+		//RP is saved and formatted for splitting in Global Script
+		class Block {
+			constructor(type, content){
+				this.type = type;
+				this.content = content;
+			}
+		}
+		
+		//Function to disable all portraits
+		function Poff(ports){
+			for(j = 0; j<ports.length; j++){
+				ports[j].visible = false;
+			}
+		}
+		
+		//Function to disable all background images
+		function Ioff(imgs){
+			for(j = 0; j<imgs.length; j++){
+				imgs[j].visible = false;
+			}
+		}
+		
+		//Turn off all images and portraits
+		Poff(ports);
+		Ioff(imgs);
+		
+		//Parse the gbl_txt
+		//The first texts will be blank (there is nothing to the left of the first ]])
+		//so when indexing this, start at 1 not 0
+		//Then load each texts into an array of Blocks objects in actionlist
+		var texts = gbl_txt.split("]]");
+		var jj = 0;
+		for(j=1; j<texts.length; j++){
+			line = texts[j].split('\n');
+			type = line[0].trim();
+			
+			
+			if (type == "Scene"){
+				scenelist.push(jj);
+				istat = [jj,istat[1],istat[2],istat[3]];
+			}
+		    else if (type == "Image"){
+				istat = [istat[0],jj,istat[2],istat[3]];
+			}
+		    else if (type == "Portrait"){
+				istat = [istat[0],istat[1],jj,istat[3]];
+			}
+		    else{
+				istat = [istat[0],istat[1],istat[2],jj];
+				textlist.push(jj);
+			}
+		    
+		    jj++;
+		    statuslist.push(istat);
+			actionlist.push(new Block(type,line[1]))
+		
+		}
+		trev = [...textlist];
+		trev.reverse();
+		
+		//Handler for Scene, Image, Portrait, Text block types
+		function BlockUpdate(){
+			if (actionlist[i].type == "Scene") {
+				i++;
+				BlockUpdate();
+			}
+		    else if (actionlist[i].type == "Image") {
+			
+				Ioff(imgs);
+				root[actionlist[i].content.trim()].visible = true;
+				i++;
+				BlockUpdate();
+				
+			}
+		    else if (actionlist[i].type == "Portrait") {
+		
+				Poff(ports);
+				root[actionlist[i].content.trim()].visible = true;
+				i++;
+				BlockUpdate();		
+			}
+		    else {
+				root.StageText.text = actionlist[i].content;
+			}	
+		}
+		//load the RP with this function call
+		BlockUpdate();
+		
+		
+		//Button listeners
+		this.NxtBtn.addEventListener("click", next)
+		//This function advances the block playhead i
+		function next () {
+			if (i < textlist[textlist.length - 1]){
+				i++;
+			}
+			else{
+				i = textlist[textlist.length - 1];
+			}
+			BlockUpdate();
+		}
+		
+		this.PrvBtn.addEventListener("click", prev)
+		//This function jumps directly to previous text type block
+		//and force loads the correct Portrait, Image, and Text
+		function prev () {
+			if (i > textlist[0]){
+				i = trev.find(e => e < i);
+			}
+			else{
+				i = textlist[0];
+			}
+			Poff(ports);
+			Ioff(imgs);
+			root.StageText.text = actionlist[i].content;
+			root[actionlist[statuslist[i][1]].content.trim()].visible = true;
+			root[actionlist[statuslist[i][2]].content.trim()].visible = true;
+		}
+		
+		this.MenuBtn.addEventListener("click", menu)
+		//This function jumps back to Menu, there is no return path
+		function menu () {
+			i=0;
+			BlockUpdate();
+		}
+	}
 
-	this.instance_1 = new lib.PrvBtn();
-	this.instance_1.setTransform(891.5,660.3);
-	new cjs.ButtonHelper(this.instance_1, 0, 1, 2, false, new lib.PrvBtn(), 3);
+	// actions tween:
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1));
+
+	// code
+	this.text = new cjs.Text("", "20px 'Verdana'");
+	this.text.lineHeight = 26;
+	this.text.parent = this;
+	this.text.setTransform(-179.95,732.8);
+
+	this.timeline.addTween(cjs.Tween.get(this.text).wait(1));
+
+	// Buttons
+	this.MenuBtn = new lib.MenuBtn();
+	this.MenuBtn.name = "MenuBtn";
+	this.MenuBtn.setTransform(891.5,612.3);
+	new cjs.ButtonHelper(this.MenuBtn, 0, 1, 2, false, new lib.MenuBtn(), 3);
+
+	this.PrvBtn = new lib.PrvBtn();
+	this.PrvBtn.name = "PrvBtn";
+	this.PrvBtn.setTransform(891.5,660.3);
+	new cjs.ButtonHelper(this.PrvBtn, 0, 1, 2, false, new lib.PrvBtn(), 3);
 
 	this.NxtBtn = new lib.NxtBtn();
 	this.NxtBtn.name = "NxtBtn";
 	this.NxtBtn.setTransform(950,727.4,1,1,0,0,0,58.5,16.6);
 	new cjs.ButtonHelper(this.NxtBtn, 0, 1, 2, false, new lib.NxtBtn(), 3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.NxtBtn},{t:this.instance_1},{t:this.instance}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.NxtBtn},{t:this.PrvBtn},{t:this.MenuBtn}]}).wait(1));
 
 	// Scene_Image
-	this.instance_2 = new lib.Lily1();
-	this.instance_2.setTransform(0,0,0.4032,0.4042);
+	this.S_Lily_Rest = new lib.Scene_2();
+	this.S_Lily_Rest.name = "S_Lily_Rest";
+	this.S_Lily_Rest.setTransform(511.9,288,1,1,0,0,0,511.9,288);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.S_Lily_Rest).wait(1));
 
 	// Text
-	this.StageText = new cjs.Text("Meanwhile, not far away, the woman they were searching for found a moment of respite hiding in an area behind some purplish-black crystal growth. She was quite winded and was struggling to catch her breath.", "20px 'Verdana'");
+	this.StageText = new cjs.Text("", "20px 'Verdana'");
 	this.StageText.name = "StageText";
 	this.StageText.lineHeight = 26;
 	this.StageText.lineWidth = 536;
@@ -431,33 +793,55 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.StageText).wait(1));
 
 	// Borders
-	this.instance_3 = new lib.MenuBox();
-	this.instance_3.setTransform(845,606);
+	this.instance = new lib.MenuBox();
+	this.instance.setTransform(845,606);
 
-	this.instance_4 = new lib.Topbar();
-	this.instance_4.setTransform(0,576);
+	this.instance_1 = new lib.Topbar();
+	this.instance_1.setTransform(0,576);
 
-	this.instance_5 = new lib.Bottombar();
-	this.instance_5.setTransform(0,760);
+	this.instance_2 = new lib.Bottombar();
+	this.instance_2.setTransform(0,760);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_5},{t:this.instance_4},{t:this.instance_3}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2},{t:this.instance_1},{t:this.instance}]}).wait(1));
 
 	// Portrait
-	this.instance_6 = new lib.Lily_Standard();
-	this.instance_6.setTransform(0,601);
+	this.Narrator = new lib.narrator();
+	this.Narrator.name = "Narrator";
+	this.Narrator.setTransform(140,684.5,1.7722,1.67,0,0,0,79,50);
+	this.Narrator.alpha = 0;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(1));
+	this.Eva_Standard = new lib.Eva_Standard_1();
+	this.Eva_Standard.name = "Eva_Standard";
+	this.Eva_Standard.setTransform(140,684.5,1,1,0,0,0,140,83.5);
+
+	this.Lily_Explain = new lib.Lily_Explain_1();
+	this.Lily_Explain.name = "Lily_Explain";
+	this.Lily_Explain.setTransform(140,684.5,1,1,0,0,0,140,83.5);
+
+	this.Lily_Ponder = new lib.Lily_Ponder_1();
+	this.Lily_Ponder.name = "Lily_Ponder";
+	this.Lily_Ponder.setTransform(140,684.5,1,1,0,0,0,140,83.5);
+
+	this.Lily_Tired = new lib.Lily_Tired_1();
+	this.Lily_Tired.name = "Lily_Tired";
+	this.Lily_Tired.setTransform(140,684.5,1,1,0,0,0,140,83.5);
+
+	this.Lily_Standard = new lib.Lily_Standard_1();
+	this.Lily_Standard.name = "Lily_Standard";
+	this.Lily_Standard.setTransform(140,684.5,1,1,0,0,0,140,83.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.Lily_Standard},{t:this.Lily_Tired},{t:this.Lily_Ponder},{t:this.Lily_Explain},{t:this.Eva_Standard},{t:this.Narrator}]}).wait(1));
 
 	// Bottom
-	this.instance_7 = new lib.Background();
-	this.instance_7.setTransform(0,576);
+	this.instance_3 = new lib.Background();
+	this.instance_3.setTransform(0,576);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(1));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new lib.AnMovieClip();
-p.nominalBounds = new cjs.Rectangle(512,384,512,384);
+p.nominalBounds = new cjs.Rectangle(330.1,384,693.9,384.9);
 // library properties:
 lib.properties = {
 	id: 'B7641CECC225324F88C755EBB8BBCD6C',
